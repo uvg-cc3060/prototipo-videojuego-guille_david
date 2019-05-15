@@ -46,4 +46,6 @@ public class DialogueManager : MonoBehaviour
     {
         Debug.Log("End of COnversation.");
     }
+
+ 
 }

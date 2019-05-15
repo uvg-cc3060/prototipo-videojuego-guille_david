@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         myRigidbody = GetComponent<Rigidbody2D>();
+
     }
 
     private void Update()
@@ -36,5 +38,18 @@ public class PlayerMovement : MonoBehaviour
             transform.position + change * speed * Time.deltaTime
         );
     }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag.Equals("Option1"))
+        {
+            SceneManager.LoadScene("MenuCong", LoadSceneMode.Additive);
+        }
+        else if (collision.tag.Equals("Option2"))
+        {
+            SceneManager.LoadScene("Menu2");
+        }
+    }
+
 
 }
