@@ -3,13 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class Dialogue : MonoBehaviour {
+public class Dialogue
+{
+    public string nombre;
 
-    public string name;
-
-
-    [TextArea(3,10)]
-    public string[] sentences;
-
+    [TextArea(2,5)]
+    public string[] oraciones;
 
 }
