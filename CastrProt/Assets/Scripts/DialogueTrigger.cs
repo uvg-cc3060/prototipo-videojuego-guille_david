@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class DialogueTrigger : MonoBehaviour
 {
     public Dialogue dialogo;
+    public Scene scene;
 
     public void TriggerDialogue()
     {
@@ -14,7 +15,7 @@ public class DialogueTrigger : MonoBehaviour
 
     public void CambiarEscena()
     {
-        SceneManager.LoadScene("Menu2");
+        SceneManager.LoadScene(scene.name);
     }
 
 }
